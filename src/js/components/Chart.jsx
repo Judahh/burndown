@@ -22,6 +22,8 @@ export default class Chart extends React.Component {
   componentDidMount() {
     let { data } = this.props;
 
+    console.log('DATA', data);
+
     // Skip charts that have nothing to show.
     if (data.stats.isEmpty) return;
 

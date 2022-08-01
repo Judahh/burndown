@@ -31,7 +31,9 @@ export default class ProjectsPage extends Page {
   render() {
     let content;
     if (!this.state.app.system.loading) {
+      console.log('state',this.state);
       let projects = this.state.projects;
+      console.log('projects',projects);
       if (projects.list.length) {
         if (!this.state.edit) {
           content = (

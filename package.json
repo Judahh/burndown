@@ -9,6 +9,8 @@
   },
   "scripts": {
     "start": "make start",
+    "dev": "make start-dev",
+    "build": "make build",
     "test": "make test"
   },
   "engines": {

@@ -68616,10 +68616,7 @@ exports.default = {
   // Firebase.
   "firebase": {
     apiKey: "AIzaSyD_kfzkAPA87PoRFIZa8JEzZkT66CqUDpU",
-    authDomain: "burnchart.firebaseapp.com",
-    databaseURL: "https://burnchart.firebaseio.com",
-    storageBucket: "firebase-burnchart.appspot.com",
-    messagingSenderId: "185222099419"
+    authDomain: "burnchart.firebaseapp.com"
   },
   // Data source provider.
   "provider": "github",
@@ -69154,8 +69151,10 @@ var Chart = function (_React$Component) {
     value: function componentDidMount() {
       var data = this.props.data;
 
-      // Skip charts that have nothing to show.
 
+      console.log('DATA', data);
+
+      // Skip charts that have nothing to show.
       if (data.stats.isEmpty) return;
 
       var issues = data.issues;
@@ -69951,8 +69950,11 @@ var Milestones = function (_React$Component) {
           projects = _props.projects,
           project = _props.project;
 
-      // Show the projects with errors first.
 
+      console.log('projects', projects);
+      console.log('project', project);
+
+      // Show the projects with errors first.
       var errors = (0, _lodash2.default)(projects.list).filter('errors').map(function (project, i) {
         var text = project.errors.join('\n');
         return _react2.default.createElement(
@@ -70485,6 +70487,7 @@ var ChartPage = function (_Page) {
       var content = void 0;
       if (!this.state.app.system.loading) {
         var projects = this.state.projects;
+        console.log('Projects: ', projects);
         // Find the milestone.
         var milestone = void 0;
         _lodash2.default.find(projects.list, function (obj) {
@@ -70848,7 +70851,9 @@ var ProjectsPage = function (_Page) {
     value: function render() {
       var content = void 0;
       if (!this.state.app.system.loading) {
+        console.log('state', this.state);
         var projects = this.state.projects;
+        console.log('projects', projects);
         if (projects.list.length) {
           if (!this.state.edit) {
             content = _react2.default.createElement(_Milestones2.default, {

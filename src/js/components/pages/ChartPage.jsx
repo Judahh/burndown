@@ -22,6 +22,7 @@ export default class ChartPage extends Page {
     let content;
     if (!this.state.app.system.loading) {
       let projects = this.state.projects;
+      console.log('Projects: ', projects);
       // Find the milestone.
       let milestone;
       _.find(projects.list, (obj) => {

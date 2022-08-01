@@ -29,6 +29,9 @@ export default class Milestones extends React.Component {
   render() {
     let { projects, project } = this.props;
 
+    console.log('projects', projects);
+    console.log('project', project);
+
     // Show the projects with errors first.
     let errors = _(projects.list).filter('errors').map((project, i) => {
       let text = project.errors.join('\n');
